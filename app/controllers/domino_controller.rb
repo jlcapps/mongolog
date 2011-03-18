@@ -1,0 +1,2 @@
+class DominoController < ApplicationController
+end
