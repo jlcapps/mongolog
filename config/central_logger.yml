@@ -1,0 +1,12 @@
+development:
+  database: mongolog
+  capsize: <%= 10.megabytes %>
+  host: localhost
+
+production:
+  database: <%= URI.parse(ENV['MONGOHQ_URL']).path.sub("/", "") %>
+  capsize: <%= 10.megabytes %>
+  host: <%= URI.parse(ENV['MONGOHQ_URL']).host %>
+  port: <%= URI.parse(ENV['MONGOHQ_URL']).port %>
+  username: <%= URI.parse(ENV['MONGOHQ_URL']).user %>
+  password: <%= URI.parse(ENV['MONGOHQ_URL']).password %>
