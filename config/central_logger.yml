@@ -3,6 +3,7 @@ development:
   capsize: <%= 10.megabytes %>
   host: localhost
 
+<% ENV['MONGOHQ_URL'] ||= "mongodb://h:s@flame.mongohq.com:27056/app475603" %>
 production:
   database: <%= URI.parse(ENV['MONGOHQ_URL']).path.sub("/", "") %>
   capsize: <%= 10.megabytes %>
