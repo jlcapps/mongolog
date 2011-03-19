@@ -23,8 +23,8 @@ logged using heroku console (as described in the central_logger README):
   >> c = collection.find(:all)
   >> c.count
 
-So what else do you need to know? Not much. See config/central_logger.yml. And
-add
+So what else do you need to know? Not much. Add central_logger to Gemfile. See
+config/central_logger.yml. And add
 
   include CentralLogger::Filter
 
