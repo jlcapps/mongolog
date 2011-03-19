@@ -2,7 +2,7 @@ mongolog
 
 An example rails app, illustrating use of the central_logger gem on heroku.com.
 To see it in action (there's not much to see) check out
-http://morning-galaxy-180.heroku.com/.
+http://morning-dusk-337.heroku.com/.
 
 To install:
 
