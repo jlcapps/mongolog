@@ -3,11 +3,11 @@ development:
   capsize: <%= 10.megabytes %>
   host: localhost
 
-<% ENV['MONGOHQ_URL'] ||= "mongodb://h:s@flame.mongohq.com:27056/app475603" %>
+<% @uri = URI.parse(ENV['MONGOHQ_URL'] || "mongodb://h:s@f.m.com:27056/app1") %>
 production:
-  database: <%= URI.parse(ENV['MONGOHQ_URL']).path.sub("/", "") %>
+  database: <%= @uri.path.sub("/", "") %>
   capsize: <%= 10.megabytes %>
-  host: <%= URI.parse(ENV['MONGOHQ_URL']).host %>
-  port: <%= URI.parse(ENV['MONGOHQ_URL']).port %>
-  username: <%= URI.parse(ENV['MONGOHQ_URL']).user %>
-  password: <%= URI.parse(ENV['MONGOHQ_URL']).password %>
+  host: <%= @uri.host %>
+  port: <%= @uri.port %>
+  username: <%= @uri.user %>
+  password: <%= @uri.password %>
